@@ -15,6 +15,25 @@ class App extends Component {
     ],
     filter: '',
   }
+
+  componentDidMount() {
+
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts)
+    if (parsedContacts) {
+       this.setState({ contacts: parsedContacts })
+    }
+    // console.log(parsedContacts)
+    }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevState);
+    console.log(this.state)
+    if (this.state.contacts !== prevState.contacts) {
+      console.log('Обновилось поле contacts, записываю contacts в хранилище')
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
   
   addContact = ({ name, number }) => {
     const newContact = { id: genId, name, number }
