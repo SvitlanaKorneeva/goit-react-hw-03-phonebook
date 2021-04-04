@@ -1,0 +1,9 @@
+.ContactList_item {
+  display: flex;
+  align-items: center;
+}
+
+.ContactList_text {
+  margin-top: 10px;
+  margin-right: 20px;
+}

@@ -1,0 +1,30 @@
+.title {
+  color: black;
+
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+.wrapper > div {
+  width: 50%;
+}
+.contactsForm {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid blueviolet;
+  border-radius: 4px;
+}
+.contactsForm input {
+  display: flex;
+  flex-direction: column;
+  border-color: grey;
+  padding: 10px;
+  margin: 20px;
+}
+.btn {
+  padding: 10px;
+}
